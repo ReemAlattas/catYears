@@ -20,6 +20,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBOutlet weak var age: UITextField!
+    
+    @IBOutlet weak var result: UILabel!
+    
+    @IBAction func findAge(sender: AnyObject) {
+        var enteredAge = Int(age.text!)
+        //print(enteredAge)
+        if enteredAge == nil {
+            result.text = "Please enter a number in the box!"
+        } else {
+            var catYears = enteredAge! * 7
+            result.text = "Your cat is \(catYears)"
+        }
+    }
 
 }
 

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CatYears" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,92 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Cat Years" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFX-6K-uPq">
+                                <rect key="frame" x="132" y="54" width="102" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="LQ5-PT-K7r"/>
+                                    <constraint firstAttribute="height" constant="21" id="Xgb-HL-QS5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter your cat's age in years:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHr-Uk-ThH">
+                                <rect key="frame" x="63" y="99" width="220" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="sZb-kd-a4L"/>
+                                    <constraint firstAttribute="width" constant="220" id="xMx-hP-Rbe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sMe-QS-blo">
+                                <rect key="frame" x="135" y="142" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Q6r-Uj-hxI"/>
+                                    <constraint firstAttribute="width" constant="97" id="kRN-gk-zVd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLk-I2-KAz">
+                                <rect key="frame" x="135" y="196" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="aHS-xK-vhS"/>
+                                    <constraint firstAttribute="height" constant="30" id="wUc-wK-deG"/>
+                                </constraints>
+                                <state key="normal" title="Find Age!"/>
+                                <connections>
+                                    <action selector="findAge:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqH-Z2-OY2"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cat.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uQK-Cs-ne3">
+                                <rect key="frame" x="53" y="300" width="240" height="264"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="264" id="82Y-PJ-KMy"/>
+                                    <constraint firstAttribute="width" constant="240" id="SoA-ln-v44"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrw-Rm-uE2">
+                                <rect key="frame" x="73" y="237" width="220" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="8rW-TB-DcX"/>
+                                    <constraint firstAttribute="height" constant="48" id="lox-H7-yYU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oFX-6K-uPq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="34" id="LRu-nM-urN"/>
+                            <constraint firstItem="uQK-Cs-ne3" firstAttribute="top" secondItem="lrw-Rm-uE2" secondAttribute="bottom" constant="15" id="RL8-hf-wc6"/>
+                            <constraint firstItem="mLk-I2-KAz" firstAttribute="top" secondItem="sMe-QS-blo" secondAttribute="bottom" constant="24" id="Zht-W9-bBK"/>
+                            <constraint firstItem="sMe-QS-blo" firstAttribute="top" secondItem="OHr-Uk-ThH" secondAttribute="bottom" constant="22" id="aFX-tP-qiE"/>
+                            <constraint firstItem="OHr-Uk-ThH" firstAttribute="top" secondItem="oFX-6K-uPq" secondAttribute="bottom" constant="24" id="cYI-dW-MCg"/>
+                            <constraint firstItem="oFX-6K-uPq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jIb-KW-Gte"/>
+                            <constraint firstItem="mLk-I2-KAz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k6y-zh-t8f"/>
+                            <constraint firstItem="lrw-Rm-uE2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kFK-Ja-gRR"/>
+                            <constraint firstItem="uQK-Cs-ne3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kgx-Ub-8Y7"/>
+                            <constraint firstItem="lrw-Rm-uE2" firstAttribute="top" secondItem="mLk-I2-KAz" secondAttribute="bottom" constant="11" id="l4g-mX-1Un"/>
+                            <constraint firstItem="OHr-Uk-ThH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t1q-2F-Cbd"/>
+                            <constraint firstItem="sMe-QS-blo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wbW-Bl-3Fk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="age" destination="sMe-QS-blo" id="iOP-T7-bm9"/>
+                        <outlet property="result" destination="lrw-Rm-uE2" id="Tcg-fb-WL9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="319"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cat.jpg" width="1100" height="1500"/>
+    </resources>
 </document>
